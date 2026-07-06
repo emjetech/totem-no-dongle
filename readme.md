@@ -4,6 +4,9 @@ Ada update baru ZMK Studio remapping tanpa perlu di flash
 
 [Full Dokumentasi ZMK](https://zmk.dev/docs)
 
+NOTES !!!
+
+Saat charging harus dalam keadaan ON (slider di slide sebelah kiri). fungsi slider memutuskan arus dari baterai ke MCU. Jadi saat charge posisi slider harus on
 
 Tools :
 [ZMK Keymap Editor](https://nickcoutsos.github.io/keymap-editor/)
