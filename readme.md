@@ -8,6 +8,7 @@ NOTES !!!
 
 Saat charging harus dalam keadaan ON (slider di slide sebelah kiri). fungsi slider memutuskan arus dari baterai ke MCU. Jadi saat charge posisi slider harus on
 
+
 Tools :
 [ZMK Keymap Editor](https://nickcoutsos.github.io/keymap-editor/)
 Video fork repository :
@@ -22,6 +23,90 @@ Lakukan langkah-langkah berikut untuk mereset semua bagian keyboard split Anda:
 - Flash image firmware yang sebenarnya untuk setiap bagian keyboard split (misalnya my_board_left.uf2 untuk bagian kiri, my_board_right.uf2 untuk bagian kanan).
 - Jika central dan peripheral tidak saling terhubung setelah menyelesaikan langkah-langkah ini, akan membantu untuk mereset central dan peripheral pada waktu yang hampir bersamaan. Biasanya dilakukan dengan menghubungkan pin reset ke ground pada setiap mikrokontroler keyboard Anda, menekan tombol reset, atau mematikan lalu menyalakan keduanya dengan sakelar daya.
 - Setelah selesai, Anda harus menghapus/lupakan keyboard dari perangkat host mana pun yang sebelumnya terpasang, lalu lakukan pairing ulang, karena informasi pairing tersebut juga telah dihapus dari keyboard.
+
+
+
+# Panduan Bluetooth ZMK (Keyboard Tanpa Layar)
+
+Keyboard ZMK memiliki beberapa slot Bluetooth yang bekerja seperti **beberapa "tempat parkir" untuk perangkat**. Meskipun keyboard tidak memiliki layar, sistem ini tetap bekerja dengan cara yang sama.
+
+### 📌 1. Slot Bluetooth
+
+Bayangkan keyboard memiliki beberapa tempat parkir.
+
+* **BT_SEL 0** = Slot 1
+* **BT_SEL 1** = Slot 2
+* **BT_SEL 2** = Slot 3
+* dan seterusnya.
+
+Setiap slot hanya dapat menyimpan **satu perangkat**.
+
+Contoh:
+
+* Slot 1 → PC
+* Slot 2 → Tablet
+* Slot 3 → MacBook
+
+Saat ingin berpindah perangkat, cukup tekan tombol **BT_SEL** yang sesuai dengan slot perangkat tersebut.
+
+---
+
+### 📌 2. Jika Keyboard Tidak Terhubung
+
+Karena keyboard tidak memiliki layar, Anda tidak akan melihat status koneksi.
+
+Apabila keyboard tidak dapat terhubung, kemungkinan:
+
+* Perangkat tujuan sedang mati.
+* Bluetooth perangkat sedang nonaktif.
+* Slot tersebut belum pernah dipasangkan (pairing).
+* Slot masih menyimpan perangkat lama.
+
+---
+
+### 📌 3. Pairing Ulang
+
+Jika ingin memasangkan perangkat baru pada slot yang sedang digunakan:
+
+1. Pilih slot dengan **BT_SEL**.
+2. Tekan **BT_CLR** untuk menghapus data Bluetooth pada slot tersebut.
+3. Masuk ke menu Bluetooth di PC/HP/Tablet.
+4. Cari nama keyboard, lalu lakukan pairing.
+
+Setelah berhasil, perangkat baru akan tersimpan pada slot tersebut.
+
+---
+
+### 📌 4. Slot Tidak Bisa Langsung Diganti
+
+Slot Bluetooth tidak dapat langsung diisi perangkat baru.
+
+Misalnya:
+
+* Slot 1 sebelumnya tersimpan untuk Laptop A.
+* Anda ingin menggunakan Slot 1 untuk Laptop B.
+
+Maka Anda harus:
+
+* Menghapus Slot 1 menggunakan **BT_CLR**, atau
+* Menggunakan slot lain yang masih kosong.
+
+---
+
+### 📌 5. Contoh Penggunaan
+
+Agar lebih praktis, gunakan pembagian seperti berikut:
+
+* **BT_SEL 0** → PC
+* **BT_SEL 1** → Tablet
+* **BT_SEL 2** → MacBook
+* **BT_SEL 3** → Smartphone
+
+Dengan begitu, Anda cukup menekan tombol **BT_SEL** sesuai perangkat yang ingin digunakan, tanpa perlu melakukan pairing setiap kali berpindah perangkat.
+
+
+
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="/docs/images/TOTEM_logo_dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="/docs/images/TOTEM_logo_bright.svg">
