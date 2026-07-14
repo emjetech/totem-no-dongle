@@ -38,7 +38,7 @@ Bayangkan keyboard memiliki beberapa tempat parkir.
 * **BT_SEL 1** = Slot 2
 * **BT_SEL 2** = Slot 3
 * dan seterusnya.
-
+Keypress BT Semua ada di [Keymap](https://github.com/emjetech/totem-no-dongle/blob/main/config/totem.keymap)
 Setiap slot hanya dapat menyimpan **satu perangkat**.
 
 Contoh:
@@ -68,7 +68,7 @@ Apabila keyboard tidak dapat terhubung, kemungkinan:
 
 Jika ingin memasangkan perangkat baru pada slot yang sedang digunakan:
 
-1. Pilih slot dengan **BT_SEL**.
+1. Pilih slot dengan **BT_SEL**. di [Keymap](https://github.com/emjetech/totem-no-dongle/blob/main/config/totem.keymap)
 2. Tekan **BT_CLR** untuk menghapus data Bluetooth pada slot tersebut.
 3. Masuk ke menu Bluetooth di PC/HP/Tablet.
 4. Cari nama keyboard, lalu lakukan pairing.
