@@ -9,6 +9,11 @@ NOTES !!!
 Saat charging harus dalam keadaan ON (slider di slide sebelah kiri). fungsi slider memutuskan arus dari baterai ke MCU. Jadi saat charge posisi slider harus on
 
 
+![Base Layer](/docs/images/Layers/Base_Layer.png)
+
+
+
+
 Tools :
 [ZMK Keymap Editor](https://nickcoutsos.github.io/keymap-editor/)
 Video fork repository :
