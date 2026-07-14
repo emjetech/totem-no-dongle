@@ -9,7 +9,15 @@ NOTES !!!
 Saat charging harus dalam keadaan ON (slider di slide sebelah kiri). fungsi slider memutuskan arus dari baterai ke MCU. Jadi saat charge posisi slider harus on
 
 
+
+### Base Layer
 ![Base Layer](/docs/images/Layers/Base_Layer.png)
+### Nav Layer
+![Nav Layer](/docs/images/Layers/Nav_Layer.png)
+### Sim Layer
+![Sim Layer](/docs/images/Layers/Sim_Layer.png)
+### Adj Layer
+![Adjust Layer](/docs/images/Layers/Adjust_Layer.png)
 
 
 
